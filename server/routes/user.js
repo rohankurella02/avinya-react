@@ -2,7 +2,7 @@ const express = require("express");
 const asyncHandler = require("express-async-handler");
 const User = require("../../models/User");
 
-userRouter = express.Router();
+const userRouter = express.Router();
 
 userRouter.post(
   "/create-user",
