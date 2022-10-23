@@ -9,7 +9,7 @@ videosRouter.get(
   asyncHandler(async (req, res) => {
     try {
       const videos = await Video.find();
-      res.status(200).send(videos);
+      res.status(200).send({ message: "success", videos });
     } catch (error) {
       res.status(500).json({ message: "Internal server error" });
     }
@@ -23,7 +23,7 @@ videosRouter.get(
       const { tag } = req.params;
       const videos = await Video.find().where({ tag: tag });
 
-      res.status(200).send(videos);
+      res.status(200).send({ message: "success", videos });
     } catch (error) {
       res.status(500).json({ message: "Internal server error" });
     }
