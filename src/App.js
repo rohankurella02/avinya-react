@@ -1,14 +1,15 @@
-import logo from './logo.svg';
-import './App.css';
-import { Routes, Route } from 'react-router-dom';
-import Chat from './Pages/Chat';
+import "./App.css";
+import { Routes, Route } from "react-router-dom";
 
 function App() {
   return (
-    <Routes>
-      <Route path="/" element={<h1>Hello</h1>} />
-      <Route path="/chat" element={<Chat />} />
-    </Routes>
+    <div className="mx-auto w-full">
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />}></Route>
+        <Route path="/tags/:tag" element={<Tag />}></Route>
+      </Routes>
+    </div>
   );
 }
 

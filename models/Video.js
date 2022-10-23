@@ -13,10 +13,6 @@ const videoSchema = mongoose.Schema({
     type: String,
     required: true,
   },
-  author: {
-    type: mongoose.ObjectId,
-    ref: "User",
-  },
 });
 
 module.exports = mongoose.model("Video", videoSchema);
